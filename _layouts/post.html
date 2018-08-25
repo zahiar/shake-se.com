@@ -1,0 +1,49 @@
+---
+layout: default
+body_class: post-template-default single single-post single-format-standard
+---
+<main id="content" class="col-md-8 col-lg-7 col-md-offset-0 col-lg-offset-1 content-area" role="main">
+    <div class="row">
+        <div class="col-xs-12">
+            <article class="box post type-post status-publish format-standard has-post-thumbnail hentry">
+                <header class="entry-header">
+                    <h1 class="entry-title">{{ page.title }}</h1>
+
+                    <div class="entry-meta">
+                        <span class="posted-on">
+                            <a href="{{ page.url }}" title="{{ page.title }}" rel="bookmark">
+                                <time class="entry-date published" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_string }}</time>
+                            </a>
+                        </span>
+
+                        <span class="byline">
+                            <span class="author vcard"><a>kr8ter</a></span>
+                        </span>
+
+                        <span class="comments-link">
+                            <a href="{{ page.url }}#disqus_thread">View comments</a>
+                        </span>
+                    </div>
+                </header>
+
+                <div class="clearfix entry-content">
+                    <img width="460" src="{{ page.image }}" class="centre wp-post-image" alt="{{ page.title }}">
+                    {{ page.content }}
+                </div>
+
+                <footer class="entry-meta entry-footer">
+                    <span class="cat-links">
+                        {% for category in page.categories %}
+                            {% capture cat-parent %}{% if category contains "Themes" %}themes/{% elsif category contains "Wallpapers" %}wallpapers{% else %}{% endif %}{% endcapture%}
+                            <a href="{{ site.baseurl }}/category/{{ cat-parent }}{{ category | replace: ' ', '-' | downcase }}" rel="category tag">{{ category }}</a>
+                        {% endfor %}
+                    </span>
+                </footer>
+            </article>
+        </div>
+
+        <div class="col-xs-12">
+            {% include disqus-comments.html %}
+        </div>
+    </div>
+</main>

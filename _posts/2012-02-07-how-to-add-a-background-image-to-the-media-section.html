@@ -1,0 +1,41 @@
+---
+layout: post
+published: true
+title: How to add a background image to the media section
+date: '2012-02-07 00:17:19 +0000'
+categories: [Tutorials]
+tags: []
+thumbnail: /downloads/tutorials/media-bg-img/tutorial-main-350x312.jpg
+image: /downloads/tutorials/media-bg-img/tutorial-main.jpg
+---
+<p><span style="line-height: 1.5em;">This tutorial will show you, how to add a background image to the media section on your phone. The Sony Ericsson Theme Creator does not allow you to do this, that's why we have created a tutorial to show you how to do it.</span></p>
+<p><!--more--></p>
+<p>Before we begin, you will need to download the following:</p>
+<ul>
+<li>TugZip (<a href="/downloads/tutorials/media-bg-img/tugzip.exe">click here to download</a>)</li>
+<li>Notepad++&nbsp;(<a href="/downloads/tutorials/media-bg-img/npp.exe">click here to download</a>)</li>
+</ul>
+<p>First, you will need to extract the theme you wish to add the background images to, using an archive tool such as TugZip, WinRAR, etc.</p>
+<p><strong>Make sure you extract the files into a new folder, as this will make your life a lot easier.</strong></p>
+<p>Now, open the file "<strong>Theme.xml</strong>" using Notepad++</p>
+<p><img class="aligncenter" title="Screenshot 1" alt="" src="/downloads/tutorials/media-bg-img/screenshot-1.jpg" width="460px" height="331px" /></p>
+<p>Go to the end of the file add the following lines before the line "<strong></Sony_Ericsson_theme></strong>".</p>
+<blockquote><p><Media_portrait_background_image Source="<strong>background-name</strong>"/><br />
+<Media_landscape_background_image Source="<strong>background-name</strong>"/></p></blockquote>
+<p>Change &ldquo;<strong>background-name</strong>&rdquo; to the name of &nbsp;your image. In the screenshot above, I will use &ldquo;<strong>bg.png</strong>&rdquo; as my media center background in portrait mode, and &ldquo;<strong>bglandscape.png</strong>&rdquo; for landscape mode.</p>
+<p>After adding the new lines, your file should look like this.</p>
+<p><img class="aligncenter" title="Screenshot 2" alt="" src="/downloads/tutorials/media-bg-img/screenshot-2.jpg" width="460" height="152" /></p>
+<p>Now save the file and close Notepad++, as we no longer need it, and copy the new images into the folder, where you extracted the theme.</p>
+<p>We will now, need to repackage the extracted files back into a theme file. To do this, open up TugZip and click on "<strong>Create new archive</strong>".</p>
+<p><img class="aligncenter" title="Screenshot 3" alt="" src="/downloads/tutorials/media-bg-img/screenshot-3.jpg" width="460" height="251" /></p>
+<p>Navigate to where you extracted the theme files and select all of the files. Now, pick where you want to save the new theme and give it a name. Finally, select &ldquo;<strong>TAR</strong>&rdquo; as the format.<br />
+Click "<strong>OK</strong>" and the new .tar archive will be created.</p>
+<p><img class="aligncenter" title="Screenshot 4" alt="" src="/downloads/tutorials/media-bg-img/screenshot-4.jpg" width="460" height="406" /><br />
+Now, simply rename the file from "<strong>.tar</strong>" to "<strong>.thm</strong>", a popup window will appear, simply click "<strong>Yes".</strong></p>
+<p>Now, copy it to your phone, apply the theme and your are now done!</p>
+<h3></h3>
+<h3>Nota Bene</h3>
+<p>Only use TugZip to create a new .tar<strong>. </strong>Using other tools such as WinRAR or 7Zip will generate invalid theme files, of which your phone will reject.</p>
+<p>Make sure you uncheck &ldquo;<strong>Hide extensions for known file types</strong>&rdquo; in Tools --> folder option --> view in windows explorer, to allow you to change the file's extension.</p>
+<p><img class="aligncenter" title="Screenshot 5" alt="" src="/downloads/tutorials/media-bg-img/screenshot-5.jpg" width="460" height="552" /></p>
+<p>Credits go to rey, for writing this tutorial.</p>
