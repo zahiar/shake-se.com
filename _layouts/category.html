@@ -1,0 +1,55 @@
+---
+layout: default
+body_class: archive category
+---
+<main id="content" class="col-sm-8 content-area" role="main">
+    <header class="box archive-header">
+        <h1 class="archive-title">Category: {{ page.title }}</h1>
+    </header>
+
+    <div class="row isotope" style="position: relative;overflow: hidden;height: 1365px;">
+        {% for post in site.categories[page.category] %}
+        <div class="col-xs-6 col-lg-4 isotope-item">
+            <article class="box">
+                <div class="entry-thumbnail">
+                    <a href="{{ post.url }}" title="{{ post.title }}">
+                        <img src="{{ post.thumbnail }}" class="attachment-thumb-small size-thumb-small wp-post-image" alt="{{ post.title }}">
+                    </a>
+                </div>
+
+                <header class="entry-header">
+                    <h2 class="entry-title"><a href="{{ post.url }}" title="{{ post.title }}" rel="bookmark">{{ post.title }}</a></h2>
+
+                    <div class="entry-meta">
+                            <span class="posted-on">
+                                <a href="{{ post.url }}" title="{{ post.date }}" rel="bookmark">
+                                    <time class="entry-date published" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time>
+                                </a>
+                            </span>
+
+                        <span class="comments-link">
+                            <a href="{{ post.url }}#disqus_thread">Leave a comment</a>
+                        </span>
+                    </div>
+                </header>
+
+                <div class="clearfix entry-summary">
+                    <p>
+                        {{ post.excerpt | remove: '<p>' | remove: '</p>' }}...
+                    <a href="{{ post.url }}" class="more-link">more <span class="meta-nav">→</span></a>
+                    </p>
+                </div>
+
+                <footer class="entry-meta entry-footer">
+                        <span class="cat-links">
+                            {% for category in post.categories %}
+                                {% capture cat-parent %}{% if category contains "Themes" %}themes/{% elsif category contains "Wallpapers" %}wallpapers{% else %}{% endif %}{% endcapture%}
+                                <a href="{{ site.baseurl }}/category/{{ cat-parent }}{{ category | replace: ' ', '-' | downcase }}" rel="category tag">{{ category }}</a>
+                            {% endfor %}
+                        </span>
+                </footer>
+            </article>
+        </div>
+        {% endfor %}
+    </div>
+</main>

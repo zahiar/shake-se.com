@@ -1,0 +1,14 @@
+baseurl: https://www.shake-se.com
+name: Shake-SE.com
+description: Simply Complex
+tagline: Simply Complex
+logo: /assets/images/logo.png
+excerpt_separator: <!--more-->
+plugins: [jekyll-paginate, jekyll-sitemap, jekyll-seo-tag]
+paginate: 9
+paginate_path: /page/:num/
+permalink: /:year/:month/:day/:title/
+social:
+  name: Shake-SE.com
+  links:
+  - https://www.youtube.com/user/Thekr8ter

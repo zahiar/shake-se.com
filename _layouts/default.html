@@ -1,0 +1,13 @@
+{% include header.html %}
+
+<div id="main" class="site-main {{ layout.body_class }}">
+    <div class="container">
+        <div class="row">
+            {{ content }}
+
+            {% include sidebar.html %}
+        </div>
+    </div>
+</div>
+
+{% include footer.html %}

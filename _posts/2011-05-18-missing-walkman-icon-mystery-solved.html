@@ -1,0 +1,18 @@
+---
+layout: post
+published: true
+title: Missing Walkman icon mystery solved!
+date: '2011-05-18 21:06:30 +0000'
+categories: [Tutorials]
+tags: []
+thumbnail: /downloads/tutorials/einstein-duh1-350x184.jpg
+image: /downloads/tutorials/einstein-duh1.jpg
+---
+<p><span style="line-height: 1.5em;">Finally, I have solved this mystery after a long time, I could not believe how simple the fix was.</span></p>
+<p><!--more--></p>
+<p>This mystery is related to the Walkman phones, where the Walkman icon would disappear from the menu.</p>
+<p>The cause of the issue is the name of the movieclip containing the walkman icon, so to fix it simply locate the following lines <strong>"var App8_"</strong> and replace them with</p>
+<p><strong>var App8_IconName = "MEDIAPLAYER_DESKTOP_ICN";<br />
+var App8_Text = "walkman";</strong></p>
+<p>Also, make sure you rename your movieclip so it corresponds to the new icon name <strong>"MEDIAPLAYER_DESKTOP_ICN"</strong></p>
+<p>Now simply test your menu and it should now work</p>

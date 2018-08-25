@@ -1,0 +1,17 @@
+---
+layout: post
+published: true
+title: Missing Walkman logo mystery solved!
+date: '2011-05-24 22:44:09 +0000'
+categories: [Tutorials]
+tags: []
+thumbnail: /downloads/tutorials/einstein-duh-350x184.jpg
+image: /downloads/tutorials/einstein-duh.jpg
+---
+<p><span style="line-height: 1.5em;">This is a common error I came across when converting Flash Lite 3 menus to Flash Lite 2. The menus would only show the Cyber-shot logo and not the Walkman one.</span></p>
+<p><!--more--></p>
+<p>In the newer menus there is only 1 camera icon, as opposed to 2, therefore the code needs to be changed slightly to accommodate this, unless you go ahead and create a separate icon for non Cyber-shot phones, and modify the code to accommodate the new icon, alternatively you can take a shortcut :)</p>
+<p>Just replace the line beginning with <strong>for (beginning of the for loop)</strong> in the <strong>checkPhoneType()</strong> function with this line:</p>
+<p><strong>for (i = 11; i >= 0; i--)</strong></p>
+<p>The line makes it check for a Walkman phone first, then it checks for a Cyber-shot phone. This is because, Walkman phones use the same camera icon as Cyber-shot phones, which resulted in the previous code recognising every phone as a Cyber-shot.</p>
+<p>Now simply test your menu and it should now work</p>
